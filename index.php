@@ -62,7 +62,7 @@
         <!-- Apply for Jobs -->
 
         <div class="col-sm-8 row-jobs">
-          <h3 class="hired">Get Hired Now!!!</h3>
+          <p class="hired">We have the best Job for you</p>
           <?php
           include_once 'connection.php';
           $query = "select * from jobrequests where status = 'approved'";
