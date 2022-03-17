@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap");
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+h5 {
+  padding-left: 25px;
+  color: #753f05;
+}
+li {
+  list-style-type: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(229, 248, 253, 0.829) !important;
+}
+nav {
+  margin-left: 70px;
+}
+.sidenav {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #492b04;
+  overflow-x: hidden;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.sidenav i {
+  text-decoration: none;
+  font-size: 30px;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+}
+
+.sidenav i:hover {
+  color: #7917a7;
+}
+.sidenav hr {
+  margin: 20px 18px 20px 18px;
+  border: 0.1px solid #fff;
+}
+.sidenav .one {
+  margin-top: 120%;
+}
+.sidenav .three {
+  margin-top: 10px;
+}
+.sidenav .four {
+  margin-top: 250%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+.box {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  left: 100px;
+  border-radius: 10px;
+}
+.box.arrow-left:after {
+  content: " ";
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  border-top: 15px solid transparent;
+  border-right: 15px solid black;
+  border-left: none;
+  border-bottom: 15px solid transparent;
+}
+
+.box a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px 8px 10px;
+  font-size: 16px;
+}
+.box .dropbtn:hover {
+  display: block;
+}
+
+.talent img {
+  /* margin-left: -20px; */
+  border-radius: 2px;
+  width: 35%;
+  z-index: -1;
+  margin-right: -200px;
+  margin-bottom: -500px;
+  position: fixed;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.376),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* search-container */
+.upper-main {
+  background: #ece7e0;
+  overflow: hidden;
+}
+.search-main {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato" !important;
+}
+.search-container {
+  background: #753f05;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 900px) {
+  .search-container {
+    margin-left: -3rem;
+  }
+}
+
+.search-container:hover > .search-input {
+  width: 400px;
+}
+
+.search-container .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+  overflow: scroll;
+  max-width: 140px;
+}
+
+.search-container .search-btn .fas {
+  color: #fff;
+}
+
+@keyframes hoverShake {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+}
+
+.search-container:hover {
+  animation: hoverShake 0.15s linear 3;
+}
+.upload {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  color: white;
+  padding-top: 3px;
+}
+.upload i {
+  padding-right: 10px;
+  font-size: 28px;
+  color: #110b04;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.2em 0.8em 1em 1em;
+  border-radius: 3px !important;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  height: 40px;
+}
+
+button .btn {
+  font-size: 18px;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+button .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #c58c42;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+button .liquid::after,
+button .liquid::before {
+  content: "";
+  width: 300%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #fff;
+}
+
+button .liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+button .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+button:hover .liquid {
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/* Jobs */
+.hired {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border-radius: 20px;
+  padding: 6px;
+  margin-top: 1rem;
+}
+.job {
+  height: 60px;
+  width: 100%;
+  background: rgba(211, 195, 195, 0.746);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.single-job {
+  border: 1px solid black;
+  border-radius: 50px;
+  height: 30px;
+}
+span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+}
+/* Talents */
+h3 {
+  text-align: center;
+  font-family: "Hubballi", cursive;
+  font-weight: 700;
+}
+
+/* logo */
+.anim {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(129, 75, 5), 0 0 82px rgb(129, 75, 5), 0 0 92px rgb(129, 75, 5),
+    0 0 102px rgb(129, 75, 5), 0 0 151px rgb(129, 75, 5);
+}
+
+.neonText {
+  padding-top: 3px;
+  padding-left: 8px;
+  color: #492b04;
+  font-weight: 700;
+  font-size: 30px;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  55%,
+  100% {
+    text-shadow: 0 0 7px rgb(61, 25, 3), 0 0 10px rgb(58, 27, 6), 0 0 21px #fff,
+      0 0 42px rgb(8, 74, 180), 0 0 82px rgb(129, 75, 5),
+      0 0 92px rgb(129, 75, 5), 0 0 102px rgb(129, 75, 5),
+      0 0 151px rgb(129, 75, 5);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+.bottom-layer {
+  margin-left: 70px;
+  /* height: 250px; */
+  width: auto;
+  background: #ece7e0;
+}
+hr.solid {
+  border-top: 3px solid #fff;
+  width: 100%;
+}
+.footer {
+  height: 70px;
+  width: auto;
+  background: #492b04;
+}
+.bottom-icons {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.bottom-icons a i {
+  text-decoration: none;
+  font-size: 25px;
+}
+/* From cssbuttons.io by @Gumpack */
+/* From cssbuttons.io by @Gumpack */
+.applyone {
+  background-image: linear-gradient(
+    45deg,
+    #492b04 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  /* margin-bottom: 18px; */
+}
+
+.applyone {
+  padding: 0px 30px 0px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 15px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+}
+
+.applyone:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.applyone:active {
+  transform: scale(0.95);
+}
