@@ -1,5 +1,10 @@
 <?php
-include '../connection.php';
+$db_host = 'localhost';
+$username = 'root';
+$password = '';
+$db_name = 'onesmartalent';
+
+$conn = mysqli_connect($db_host, $username, $password, $db_name);
 $position =   $_POST["position"];
  $category =  $_POST["category"];
  $jobtype =  $_POST["jobtype"];
